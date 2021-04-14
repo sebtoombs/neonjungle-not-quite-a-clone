@@ -1,0 +1,18 @@
+.l-overlay-navigation {
+  @mixin vstack 1.25rem;
+
+  &--nav-item {
+    font-weight: 900;
+    color: var(--pink-primary);
+    display: block;
+    font-size: 1.75rem;
+    text-decoration: none;
+
+    @media (min-width: map(breakpoints, lg)) {
+      & {
+        font-size: 3.125rem;
+        text-align: right;
+      }
+    }
+  }
+}

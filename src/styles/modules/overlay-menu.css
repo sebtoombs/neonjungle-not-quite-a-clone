@@ -1,0 +1,48 @@
+.l-overlay-menu {
+  pointer-events: none;
+  opacity: 0;
+
+  transition: 0.2s opacity ease-in-out;
+  transition-delay: 0s;
+  will-change: opacity;
+  display: none;
+
+  @mixin py 5rem;
+
+  &--cta {
+    grid-area: cta;
+  }
+  &--social {
+    grid-area: social;
+  }
+  .l-overlay-navigation {
+    grid-area: nav;
+  }
+
+  &--cta,
+  &--social {
+    display: none;
+  }
+
+  @media (min-width: map(breakpoints, lg)) {
+    &--inner {
+      display: grid;
+      grid-template-areas: "cta nav" "social social";
+    }
+    &--cta,
+    &--social {
+      display: block;
+    }
+  }
+
+  /* This is one way to solve the "animate presence" issue. Its easy, but not perfect */
+  body.overlay-open & {
+    display: block;
+  }
+
+  body.menu-open & {
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+    transition-delay: 0.2s;
+  }
+}

@@ -1,0 +1,46 @@
+.l-site-content {
+  @mixin px 30px;
+  padding-bottom: 100px;
+
+  /* we'd like to use a stack here, but if we do, we need to find a way to kill margin collapse on 
+  the page sections (so scrollama works nicely). So instead we'll use padding on the sections */
+  & > * {
+    @mixin py 8rem;
+  }
+
+  @media (min-width: map(breakpoints, lg)) {
+    & {
+      padding-bottom: 150px;
+    }
+    & > * {
+      @mixin py 14rem;
+    }
+  }
+
+  & > * {
+    &:first-of-type {
+      padding-top: 0;
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
+  opacity: 1;
+  will-change: opacity;
+  transition: 0.2s opacity ease-in-out;
+  transition-delay: 0.4s;
+
+  body.menu-open & {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    transition-delay: 0;
+  }
+
+  @media (min-width: map(breakpoints, md)) {
+    & {
+      @mixin px 100px;
+    }
+  }
+}

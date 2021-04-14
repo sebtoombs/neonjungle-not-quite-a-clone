@@ -1,0 +1,103 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.container {
+  width: 100%;
+  @mixin mx auto;
+}
+@media (min-width: map(breakpoints, sm)) {
+  .container {
+    max-width: map(breakpoints, sm);
+  }
+}
+
+@media (min-width: map(breakpoints, md)) {
+  .container {
+    max-width: map(breakpoints, md);
+  }
+}
+
+@media (min-width: map(breakpoints, lg)) {
+  .container {
+    max-width: map(breakpoints, lg);
+  }
+}
+
+@media (min-width: map(breakpoints, xl)) {
+  .container {
+    max-width: map(breakpoints, xl);
+  }
+}
+
+@media (min-width: map(breakpoints, 2xl)) {
+  .container {
+    max-width: map(breakpoints, 2xl);
+  }
+}
+
+.title-1 {
+  line-height: 0.85;
+  font-size: 80px;
+  font-weight: 900;
+  @media (min-width: map(breakpoints, lg)) {
+    & {
+      font-size: 135px;
+    }
+  }
+}
+
+.title-2 {
+  line-height: 0.9;
+  font-size: 50px;
+  font-weight: 900;
+  @media (min-width: map(breakpoints, lg)) {
+    & {
+      font-size: 96px;
+    }
+  }
+}
+
+.title-3 {
+  font-size: 50px;
+  font-weight: 900;
+  /* @media (min-width: map(breakpoints, lg)) {
+    & {
+      font-size: 80px;
+    }
+  } */
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-pink-primary {
+  color: var(--pink-primary);
+}
+
+.text-lg {
+  font-size: 1.25rem;
+  @media (min-width: map(breakpoints, lg)) {
+    font-size: 1.5rem;
+  }
+}
+
+.font-bold {
+  font-weight: 700;
+}
+.font-boldest {
+  font-weight: 900;
+}
+
+.copy {
+  @mixin vstack 1rem;
+}

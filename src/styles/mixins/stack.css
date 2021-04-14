@@ -1,0 +1,31 @@
+@define-mixin hstack $value {
+  display: flex;
+  flex-direction: row;
+
+  & > * {
+    margin-left: $(value);
+    margin-right: $(value);
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@define-mixin vstack $value {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    margin-top: $(value);
+    margin-bottom: $(value);
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

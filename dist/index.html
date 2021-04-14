@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-au">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf8">
+  <meta name="theme-color" content="#f84363">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+
+  <title>Neon Jungle Clone</title>
+
+  <!-- Extra head stuff (icons, SEO, other meta) skipped for brevity. -->
+
+  <!-- Don't have access to Proxima Nova, so font family is Roboto -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  />
+
+<link href="main.css" rel="stylesheet"></head>
+
+<body>
+  <div class="l-background">
+    <div class="l-background-image">
+      <!-- Just an image tag here, but hopefully in production we'd have some image cleverness -->
+      <img class="l-background-image--img" src="img/header.jpg" alt=""/>
+    </div>
+    <div class="l-background-overlay"></div>
+  </div>
+  <div class="l-body-wrapper">
+
+    <header class="l-site-header">
+      <div class="l-site-header--inner container">
+        <div class="l-brand">
+          <a href="/" class="l-brand--link">
+            <span class="sr-only">
+              Home
+            </span>
+            <img
+              aria-hidden="true"
+              class="l-brand--img"
+              src="/img/logo.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="l-site-header--navigation">
+          <button class="l-nav-toggle" type="button">
+            <span class="l-nav-toggle--inner">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+          <nav class="l-primary-navigation">
+            <a class="l-primary-navigation--nav-item" href="#">
+              Brands
+            </a>
+            <a class="l-primary-navigation--nav-item" href="#">
+              Websites
+            </a>
+            <a class="l-primary-navigation--nav-item" href="#">
+              Apps
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="l-overlay-menu">
+        <div class="l-overlay-menu--inner container">
+          <nav class="l-overlay-navigation">
+            <a class="l-overlay-navigation--nav-item" href="#">
+              Brands
+            </a>
+            <a class="l-overlay-navigation--nav-item" href="#">
+              Websites
+            </a>
+            <a class="l-overlay-navigation--nav-item" href="#">
+              Apps
+            </a>
+            <a class="l-overlay-navigation--nav-item" href="#">
+              Wagtail Development
+            </a>
+            <a class="l-overlay-navigation--nav-item" href="#">
+              Careers
+            </a>
+          </nav>
+          <div class="l-overlay-menu--cta">
+            <span class="l-overlay-menu--cta-title title-3 text-white">
+              Let's chat about working together
+            </span>
+          </div>
+          <div class="l-overlay-menu--social"></div>
+        </div>
+      </div>
+    </header>    <main class="l-site-content" role="main">
+      <section>
+        <div class="container">
+          <div class="copy">
+            <h1 class="title-1 text-pink-primary">Let's make<br/> magic.</h1>
+            <p class="text-lg text-white font-boldest">Digital design studio on Hobart's waterfront.</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container" data-scrollytime>
+          <div class="copy">
+            <h2 class="title-2 text-pink-primary" data-animation="fadeInRight">I'm animated!</h2>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container" data-scrollytime>
+          <div class="copy">
+            <h2 class="title-2 text-pink-primary" data-animation="fadeInRight">
+              Some content truncated.
+            </h2>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+
+  </div>
+<script defer src="main.js"></script></body>
+
+</html>

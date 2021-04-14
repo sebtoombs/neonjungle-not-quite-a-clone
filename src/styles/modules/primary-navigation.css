@@ -1,0 +1,50 @@
+.l-primary-navigation {
+  margin-top: auto;
+
+  opacity: 1;
+  will-change: opacity;
+  transition: 0.2s opacity ease-in-out;
+  transition-delay: 0.4s;
+
+  display: none;
+
+  &--nav-item {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      height: 4px;
+      opacity: 0;
+      background-color: var(--red-primary);
+      width: 100%;
+      transform-origin: left;
+      transform: scaleX(0.2);
+      transition: opacity 0.1s ease-in-out, transform 0.18s ease-in-out;
+      will-change: opacity, transform;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+
+  body.menu-open & {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    transition-delay: 0;
+  }
+
+  @media (min-width: map(breakpoints, md)) {
+    & {
+      @mixin hstack 2rem;
+    }
+  }
+}

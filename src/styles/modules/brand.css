@@ -1,0 +1,13 @@
+.l-brand {
+  min-width: 130px;
+
+  &--link {
+    display: block;
+  }
+
+  @media (min-width: map(breakpoints, md)) {
+    & {
+      min-width: 250px;
+    }
+  }
+}

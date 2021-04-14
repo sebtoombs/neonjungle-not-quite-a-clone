@@ -1,0 +1,9 @@
+@define-mixin px $value {
+  padding-left: $(value);
+  padding-right: $(value);
+}
+
+@define-mixin py $value {
+  padding-top: $(value);
+  padding-bottom: $(value);
+}
